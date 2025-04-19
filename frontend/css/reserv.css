@@ -1,0 +1,96 @@
+.reservation {
+  margin: 60px auto;
+  max-width: 900px;
+  background-color: transparent;
+  font-family: 'Inter';
+}
+
+.reservation-menu {
+  display: flex;
+  border: 1px solid var(--textwhite);
+}
+
+.menu-item {
+  position: relative;
+  flex: 1;
+  text-align: center;
+  color: white;
+  padding: 15px 10px;
+  border-right: 1px solid #999;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+}
+
+.menu-item:last-child {
+  border-right: none;
+}
+
+.menu-item .menu-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  color: var(--doredecor);
+  width: 100%;
+  padding: 15px;
+  z-index: 10;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+}
+
+.menu-item:hover {
+  background-color: #f5f5f5;
+  color: #b2a75f;
+}
+
+.menu-item:hover .menu-content {
+  display: block;
+}
+
+/* Style calendrier dans hover */
+.menu-content table {
+  width: 100%;
+  border-collapse: collapse;
+  color: var(--backgroundgrey);
+  font-size: 14px;
+}
+
+.menu-content a {
+  color: var(--doredecor);
+}
+
+.menu-item .menu-content {
+  border: 1px solid var(--doredecor);
+}
+
+.menu-content th {
+  color: #b2a75f;
+  padding: 5px 0;
+}
+
+.menu-content td {
+  text-align: center;
+  padding: 6px;
+  border-radius: 50%;
+  transition: background 0.2s;
+}
+
+.menu-content td:hover {
+  background-color: #eee;
+}
+
+.menu-content .selected {
+  border: 1px solid #b2a75f;
+  color: #b2a75f;
+}
+
+main h5, main p {
+  text-align: center;
+}
+
+main h5 {
+  font-size: 2rem;
+  color: var(--doredecor);
+  font-family: "Birthstone";
+}
+
