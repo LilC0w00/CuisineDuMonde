@@ -8,6 +8,11 @@ body {
   height: 2000px;
 }
 
+a {
+  text-decoration: none;
+  color: var(--textwhite);
+}
+
 :root {
   --backgroundgrey: #393D3F;
   --textwhite: #ffffff;
