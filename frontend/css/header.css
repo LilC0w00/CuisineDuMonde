@@ -88,10 +88,6 @@ nav ul li {
   transition: color 0.3s ease;
 }
 
-nav ul li:hover {
-  color: var(--doredecor);
-}
-
 .logo-miniature {
   margin:0;
   margin-left: 100px; 

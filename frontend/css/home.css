@@ -1,0 +1,67 @@
+main {
+  text-align: center;
+}
+
+.titre-main {
+  text-align: center;
+  margin: 6vh 0;
+  font-weight: 100;
+  font-size: 2rem;
+  font-style: italic;
+}
+
+#carte-pays {
+  /* border: 1px red solid; */
+  height: 80vh;
+  display: flex;
+  justify-content: center;  /* Pour centrer les cartes initialement */
+  align-items: center;      /* Pour centrer verticalement */
+  position: relative;       /* Pour gérer le positionnement des cartes */
+  overflow: hidden;         /* Empêche les cartes de sortir du conteneur */
+}
+
+.carte {
+  position: relative;
+  transition: transform 0.3s ease, filter 0.3s ease;  /* Pour les animations fluides */
+  width: 26vw;  /* Les cartes font 30% de la largeur de la fenêtre */
+  height: 70vh;  /* Les cartes ont une hauteur de 70% de la hauteur de la fenêtre */
+  margin: 0 40px; /* Espacement entre les cartes */
+}
+
+.title-card {
+  position: absolute;
+  top: -50px;  /* Décalage du titre du haut de la carte */
+  left: 50%;
+  transform: translateX(-50%);  /* Centre le titre horizontalement */
+  font-size: 2rem;  /* Taille du titre */
+  color: gold;  /* Couleur dorée */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);  /* Ombre pour un meilleur contraste sur l'image */
+  text-align: center;
+  padding: 10px;
+}
+
+/* GESTION IMAGES */
+
+.carte img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: 1px solid var(--doredecor);
+}
+
+main button {
+  background-color: transparent;
+  color: var(--doredecor);
+  
+  font-size: 20px;
+
+  border: 1px var(--textwhite) solid;
+  width: 220px;
+  height: 50px;
+
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+
+  margin-top: 10vh;
+}
+
