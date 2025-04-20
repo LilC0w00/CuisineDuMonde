@@ -36,43 +36,46 @@
   </header>
 
   <main>
+
     <section class="reservation">
-      <form id="reservationForm" action="/frontend/pages/reserv-finale.html" method="GET" class="reservation-menu">
-        
-        <!-- Thèmes -->
+      <div class="reservation-menu">
         <div class="menu-item" id="themes">
-          <span class="menu-toggle">Thèmes</span>
+          <span>Thèmes</span>
           <div class="menu-content">
-            <input type="radio" name="theme" value="japon" id="japon">
-            <label for="japon"><em>Japon</em></label><br>
-            <input type="radio" name="theme" value="maroc" id="maroc">
-            <label for="maroc"><em>Maroc</em></label><br>
-            <input type="radio" name="theme" value="italy" id="italy">
-            <label for="italy"><em>Italy</em></label>
+            <a href="http://"><em>Japon</em></a><br>
+            <a href="http://"><em>Maroc</em></a><br>
+            <a href="http://"><em>Italy</em></a>
           </div>
         </div>
     
-        <!-- Date -->
         <div class="menu-item" id="date">
-          <span class="menu-toggle">Date</span>
+          <span>Date</span>
           <div class="menu-content">
-            <input type="date" name="date" id="dateInput" required style="width: 100%; padding: 5px;">
+            <!-- Mini calendrier -->
+            <table>
+              <thead>
+                <tr>
+                  <th>Su</th><th>Mo</th><th>Tu</th><th>We</th><th>Th</th><th>Fr</th><th>Sa</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>30</td><td>31</td><td>1</td><td>2</td><td>3</td><td>4</td><td></td></tr>
+                <tr><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td></td></tr>
+                <tr><td>13</td><td>14</td><td>15</td><td>16</td><td class="selected">18</td><td>19</td><td></td></tr>
+              </tbody>
+            </table>
           </div>
         </div>
     
-        <!-- Personnes -->
         <div class="menu-item" id="persons">
-          <span class="menu-toggle">👤 Nb. Personnes</span>
-          <div class="menu-content">
-            <input type="number" name="persons" id="personsInput" min="1" max="10" required value="1" style="width: 100%; padding: 5px;">
-          </div>
+          <span>👤 Nb. Personnes</span>
+          <div class="menu-content">1, 2, 3, 4...</div>
         </div>
     
-        <!-- Bouton -->
         <div class="menu-item reserve-btn">
-          <button type="submit"><span>Réservez</span></button>
+          <a href="/frontend/pages/reserv-finale.html"><span>Réservez</span></a>
         </div>
-      </form>
+      </div>
     </section>
 
     <iframe 
@@ -86,9 +89,11 @@
 
     <h5>Une Table, Mille Destinations</h5>
     <p>Chez Cuisine du Monde, chaque pays sur cette carte est une promesse d’évasion. <br>Ce soir, laissez votre palais choisir votre destination : un plat, une ambiance, une culture. <br>Que ce soit l’élégance du Japon, les épices du Maroc ou la chaleur de l'Italie… chaque coin du globe a son histoire à vous raconter.</p>
+
+    
+    
   </main>
   
-  <!-- FOOTER -->
 
   <footer>
     <div class="ligne-footer"></div>
@@ -107,33 +112,5 @@
     </nav>
     <h4 class="logo-miniature">CDM</h4>
   </footer>
-
-  <!-- SCRIPT TEMPORTAIRE : -->
-  <script>
-    // Ouvrir/fermer menu au clic
-    document.querySelectorAll('.menu-toggle').forEach(toggle => {
-      toggle.addEventListener('click', () => {
-        const parent = toggle.closest('.menu-item');
-        parent.classList.toggle('active');
-  
-        // Fermer les autres
-        document.querySelectorAll('.menu-item').forEach(item => {
-          if (item !== parent) item.classList.remove('active');
-        });
-      });
-    });
-  
-    // Validation du formulaire avant soumission
-    document.getElementById('reservationForm').addEventListener('submit', function(e) {
-      const themeSelected = document.querySelector('input[name="theme"]:checked');
-      const date = document.getElementById('dateInput').value;
-      const persons = document.getElementById('personsInput').value;
-  
-      if (!themeSelected || !date || !persons) {
-        e.preventDefault(); // Empêche l'envoi
-        alert("Veuillez remplir tous les champs avant de réserver.");
-      }
-    });
-  </script>
 </body>
 </html>
