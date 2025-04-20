@@ -65,3 +65,7 @@ main button {
   margin-top: 10vh;
 }
 
+main button:hover{
+  background-color: var(--textwhite);
+}
+

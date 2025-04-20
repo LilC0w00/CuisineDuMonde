@@ -68,3 +68,24 @@ main {
 
   cursor: pointer;
 }
+
+#theme-decouvrir {
+  background-color: transparent;
+  color: var(--doredecor);
+  
+  font-size: 20px;
+
+  border: 1px var(--textwhite) solid;
+  width: 220px;
+  height: 50px;
+
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+
+  margin-top: 10vh;
+}
+
+#theme-decouvrir:hover {
+  background-color: var(--textwhite);
+
+}
