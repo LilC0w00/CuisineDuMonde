@@ -34,6 +34,40 @@
       <a href="/frontend/pages/reserv.html"><button>Réservez</button></a>
   </header>
 
+  <main>
+    <form id="form-reservation" class="form-resa">
+      <div id="recap-reservation" class="recap">
+        <p id="theme-selectionne"></p>
+        <p id="date-selectionnee"></p>
+        <p id="nb-personnes"></p> 
+        <!-- a completer en js -->
+      </div>
+
+      <h3>Réservation - Cuisine Du Monde - Bordeaux</h3>
+      
+      <label>Nom :</label>
+      <input type="text" name="nom" required>
+    
+      <label>Email :</label>
+      <input type="email" name="email" required> <br>
+    
+      <label>Horaire</label>
+      <input type="time" name="time" required>
+    
+      <label>Numéro de Téléphone</label>
+      <input type="number" name="tel" min="1111111111"> <br>
+    
+      <button type="submit">Envoyer</button>
+    </form>
+    
+    <div id="confirmation" class="hidden">
+      <img src="/frontend/images/thanks.png" alt="Image merci" />
+      <h4>Merci ! À bientôt 😊</h4>
+      <a href="/frontend/index.html"><button>Retour</button></a>
+    </div>
+    
+  </main>
+
   <footer>
     <div class="ligne-footer"></div>
     <nav>

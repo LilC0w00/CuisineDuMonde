@@ -43,9 +43,9 @@
   color: #b2a75f;
 }
 
-.menu-item:hover .menu-content {
+/* .menu-item:hover .menu-content {
   display: block;
-}
+} */
 
 /* Style calendrier dans hover */
 .menu-content table {
@@ -93,4 +93,40 @@ main h5 {
   color: var(--doredecor);
   font-family: "Birthstone";
 }
+
+.menu-content input[type="radio"] {
+  margin-right: 5px;
+}
+
+.menu-content label {
+  color: var(--doredecor);
+  cursor: pointer;
+}
+
+.menu-content input[type="date"],
+.menu-content input[type="number"] {
+  border: 1px solid var(--doredecor);
+  border-radius: 4px;
+  font-size: 14px;
+  color: var(--backgroundgrey);
+}
+
+.reserve-btn button {
+  background: none;
+  border: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+}
+
+.menu-content {
+  display: none;
+}
+
+.menu-item.active .menu-content {
+  display: block;
+}
+
 
