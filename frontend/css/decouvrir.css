@@ -17,14 +17,17 @@ main {
 
 .decouvert-themes {
   width: 65%;
-  border: 1px var(--doredecor) solid;
   height: 100%;
 }
 
-.decouvert-themes img {
+.decouvert-themes #img-decouvert {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
   position: relative;
   z-index: -1;
+  border: 1px var(--doredecor) solid;
+
 }
 
 .pres-themes {
