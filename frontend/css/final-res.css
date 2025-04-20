@@ -1,0 +1,78 @@
+main {
+  display: flex;
+  justify-content: center;
+}
+
+.formulaire {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  color: var(--backgroundgrey);
+  font-weight: bold;
+  margin-top: 10vh;
+  width: 60vw;
+  height: 60vh;
+  border: 1px var solid;
+  border-radius: 20px;
+  text-align: center;
+
+}
+
+.formulaire h3 {
+  margin-top: 5%;
+  font-weight: 200;
+
+}
+
+#recap-reservation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border: 1px solid var(--backgroundgrey);
+  border-radius: 20px;
+  margin: 5% 0;
+  width: 40vw;
+}
+
+.formulaire input {
+  padding: 10px 60px;
+  border : 1px solid rgba(128, 128, 128, 0.39);
+  color : rgba(128, 128, 128, 0.39);
+}
+
+#colonne {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  justify-content: space-around;
+  /* border: 1px red solid; */
+  padding: 20px 40px;
+  height: 20vh;
+  text-align: left;
+}
+
+#colonne-un {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  justify-content: space-between;
+
+}
+
+#colonne-deux {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 40%;
+}
+
+.formulaire button {
+  padding: 20px 100px;
+  border-radius: 20px;
+  border: none;
+  margin-top: 35px;
+  background-color: var(--doredecor);
+  color: var(--textwhite);
+}
+
+

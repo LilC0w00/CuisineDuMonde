@@ -93,7 +93,3 @@ main h5 {
   color: var(--doredecor);
   font-family: "Birthstone";
 }
-
-.menu-item a {
-  text-decoration: none;
-}
