@@ -3,14 +3,17 @@ session_start();
 
 $pdo = new PDO("mysql:host=localhost;dbname=cuisine_du_monde", "root", "");
 
-// Recherche utilisateur
-$stmt = $pdo->prepare("SELECT * FROM utilisateurs WHERE email = ? AND password = ?");
-$stmt->execute([$_POST['email'], $_POST['password']]); // ⚠️ à sécuriser plus tard
+// Sécurité à améliorer, mais on reste simple pour l’instant
+$stmt = $pdo->prepare("SELECT * FROM utilisateurs WHERE email = ?");
+$stmt->execute([$_POST['email']]);
 $user = $stmt->fetch();
 
-if ($user) {
+if ($user && password_verify($_POST['password'], $user['password'])) {
   $_SESSION['admin'] = $user['email'];
-  header("Location: admin-dashboard.php");
+  header("Location: admin.php");
+  exit();
 } else {
   echo "Identifiants incorrects";
 }
+// Pour aider au debug :
+var_dump($_POST);

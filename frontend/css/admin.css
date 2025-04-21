@@ -1,3 +1,7 @@
+body {
+  margin: 0;
+}
+
 .admin-container {
   display: flex;
   min-height: 100vh;
@@ -7,10 +11,30 @@
   background-color: #222222;
   color: white;
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  font-family: inherit;
 }
+
+.sidebar .quit {
+  margin-top: auto;
+  width: 55px;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: white;
+}
+
 
 .sidebar h4 {
   text-align: center;
+}
+
+.sidebar img {
+  width: 75px;
+  height: auto;
+  align-self: center;
 }
 
 .sidebar ul {
@@ -74,4 +98,17 @@ input#search {
   width: 100%;
   max-width: 300px;
 }
+
+.sidebar li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;  
+}
+
+.sidebar .icons {
+  width: 28px;
+  margin-right: 20px;
+}
+
+
 

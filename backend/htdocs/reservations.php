@@ -1,5 +1,11 @@
 <?php
 
+session_start();
+if (!isset($_SESSION['admin'])) {
+  header("Location: admin-login.html"); // Interdit si pas connecté
+  exit;
+}
+
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
@@ -19,6 +25,7 @@ $reservations = $pdo->query("SELECT * FROM reservations ORDER BY date DESC")->fe
 
 ?>
 
+<!-- HTML -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -28,23 +35,23 @@ $reservations = $pdo->query("SELECT * FROM reservations ORDER BY date DESC")->fe
   <title>Admin | CuisineDuMonde</title>
 
   <!-- CSS LINK -->
-  <link rel="stylesheet" href="../../frontend/css/admin.css">
+  <link rel="stylesheet" href="../../frontend/css/admin.css?v=<?= time(); ?>">
 </head>
 
 <body>
   <div class="admin-container">
     <!-- Sidebar -->
     <aside class="sidebar">
-      <img src="" alt="">
+      <img src="../../frontend/images/account_circle_35dp_FFFFFF_FILL0_wght400_GRAD0_opsz40.png" alt="logo de profil">
       <h4>Admin</h4>
       <ul>
-        <li><img src="" alt=""><a href="../../backend/htdocs/admin.php">Dashboard</a></li>
-        <li><img src="" alt=""><a href="../../backend/htdocs/reservations.php">Réservations</a></li>
-        <li><img src="" alt="">Planning</li>
-        <li><img src="" alt="">Paramètres</li>
+        <li><img src="../../frontend/images/layout-dashboard.png" alt="icon dashboard" class="icons"><a href="../../backend/htdocs/admin.php">Dashboard</a></li>
+        <li><img src="../../frontend/images/book-open-check.png" alt="icon reservation" class="icons"><a href="../../backend/htdocs/reservations.php">Réservations</a></li>
+        <li><img src="../../frontend/images/calendar-check-2.png" alt="icon planning" class="icons">Planning</li>
+        <li><img src="../../frontend/images/settings.png" alt="icon parametre" class="icons">Paramètres</li>
       </ul>
 
-      <img src="" alt="">
+      <img src="../../frontend/images/exit.png" alt="Quitter" style="cursor:pointer;" onclick="window.location.href='logout.php'" class="quit">
     </aside>
 
     <!-- Main content -->
