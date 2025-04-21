@@ -38,40 +38,36 @@
   <main>
     <section class="formulaire">
 
-      <h3>Réservation - Cuisine Du Monde - Bordeaux</h3>  
-      <form id="form-reservation" class="form-resa">
-        <div id="recap-reservation" class="recap">
-          <p id="theme-selectionne">Japan</p>
-          <p id="date-selectionnee">01/01</p>
-          <p id="nb-personnes">2</p> 
-          <!-- a completer en js -->
-        </div>
-
-        <div id="colonne">
-
-          <div id="colonne-un">
-            <label>Nom Prenom</label> 
-            <input type="text" name="nom" required> 
-            <label>Email</label>
-            <input type="email" name="email" required> 
+      <h3>Réservation - Cuisine Du Monde - Bordeaux</h3>
+      <div id="form-container">
+        <form id="form-reservation" class="form-resa">
+          <div id="recap-reservation" class="recap">
+            <p id="theme-selectionne"></p>
+            <p id="date-selectionnee"></p>
+            <p id="nb-personnes"></p> 
+            <!-- a completer en js -->
           </div>
 
-          <div id="colonne-deux">
-            <label>Horaire</label> 
-            <input type="time" name="time" required>
-            <label>Numéro de Téléphone</label>
-            <input type="number" name="tel" min="1111111111"> 
+          <div id="colonne">
+            <div id="colonne-un">
+              <label>Nom Prenom</label> 
+              <input type="text" name="nom" id="nom" required> 
+              <label>Email</label>
+              <input type="email" name="email" id="email" required> 
+            </div>
+
+            <div id="colonne-deux">
+              <label>Horaire</label> 
+              <input type="time" name="time" id="heure" required>
+              <label>Numéro de Téléphone</label>
+              <input type="number" name="tel" maxlength="10" id="tel" required> 
+            </div>
           </div>
-        </div>
+        
+          <button type="submit" id="btn-sub">Valider</button>
+        </form>
+      </div>
       
-        <button type="submit">Envoyer</button>
-      </form>
-      
-      <!-- <div id="confirmation" class="hidden">
-        <img src="/frontend/images/thanks.png" alt="Image merci" />
-        <h4>Merci ! À bientôt 😊</h4>
-        <a href="/frontend/index.html"><button>Retour</button></a>
-      </div> -->
     </section>
     
   </main>
@@ -92,5 +88,8 @@
     </nav>
     <h4 class="logo-miniature">CDM</h4>
   </footer>
+
+  <script src="/frontend/js/envoiedb.js"></script>
+  <script src="/frontend/js/formulaire.js"></script>
 </body>
 </html>
