@@ -8,6 +8,11 @@
   color: white;
   padding: 20px;
 }
+
+.sidebar h4 {
+  text-align: center;
+}
+
 .sidebar ul {
   list-style: none;
   padding: 0;
@@ -45,7 +50,6 @@ table {
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
   border-radius: 10px;
   overflow: hidden;
-  border: 1px red solid;
 }
 
 table th, table td {

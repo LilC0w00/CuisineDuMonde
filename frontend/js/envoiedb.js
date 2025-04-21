@@ -30,10 +30,19 @@ document.querySelector("#form-reservation").addEventListener("submit", (e) => {
     .then((response) => response.text())
     .then((data) => {
       // Afficher message de confirmation
-      document.querySelector("#form-container").innerHTML = `
-          <p>Merci pour votre réservation, ${nom} !</p>
-          <button onclick="window.location.href='/CuisineDuMonde/frontend/index.html'">Retour à l'accueil</button>
-        `;
+      const formContainer = document.querySelector("#form-container");
+      formContainer.innerHTML = `
+        <p>Merci pour votre réservation, ${nom} !</p>
+      `;
+
+      // Créer un bouton et l'ajouter au container
+      const button = document.createElement("button");
+      button.textContent = "Retour à l'accueil";
+      button.addEventListener("click", () => {
+        window.location.href = "../index.html";
+      });
+
+      formContainer.appendChild(button);
     })
     .catch((error) => {
       console.error("Error:", error);
