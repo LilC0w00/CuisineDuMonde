@@ -10,6 +10,14 @@
   border: 1px solid var(--textwhite);
 }
 
+.reserve-btn button{
+  color: var(--doredecor);
+  border: none;
+  background-color: unset;
+  font-size: 18px;
+  cursor: pointer;
+}
+
 .menu-item {
   position: relative;
   flex: 1;
