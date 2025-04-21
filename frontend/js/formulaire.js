@@ -6,8 +6,8 @@ document.addEventListener("DOMContentLoaded", () => {
       e.preventDefault(); // ⛔ Empêche la soumission du formulaire
 
       const theme = document.querySelector("#theme").value;
-      const date = document.querySelector("#date-input").value;
-      const nbPersonnes = document.querySelector("#persons-input").value;
+      const date = document.querySelector("#date").value || "2025-01-01";
+      const nbPersonnes = document.querySelector("#persons-input").value || 1;
 
       localStorage.setItem("theme", theme);
       localStorage.setItem("date", date);

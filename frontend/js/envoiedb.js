@@ -5,7 +5,7 @@ document.querySelector("#form-reservation").addEventListener("submit", (e) => {
   const nom = document.querySelector("#nom").value;
   const email = document.querySelector("#email").value;
   const tel = document.querySelector("#tel").value;
-  const heure = document.querySelector("#heure").value;
+  const heure = document.querySelector("#heure").value || "00/00";
 
   // Récupérer les infos précédentes
   const theme = localStorage.getItem("theme");
@@ -23,7 +23,7 @@ document.querySelector("#form-reservation").addEventListener("submit", (e) => {
   formData.append("nb_personnes", nbPersonnes);
 
   // Envoi vers le fichier PHP
-  fetch("backend/htdocs/save_reservation.php", {
+  fetch("http://localhost/CuisineDuMonde/backend/htdocs/save_reservation.php", {
     method: "POST",
     body: formData,
   })
@@ -32,7 +32,10 @@ document.querySelector("#form-reservation").addEventListener("submit", (e) => {
       // Afficher message de confirmation
       document.querySelector("#form-container").innerHTML = `
           <p>Merci pour votre réservation, ${nom} !</p>
-          <button onclick="window.location.href='index.html'">Retour à l'accueil</button>
+          <button onclick="window.location.href='/CuisineDuMonde/frontend/index.html'">Retour à l'accueil</button>
         `;
+    })
+    .catch((error) => {
+      console.error("Error:", error);
     });
 });
