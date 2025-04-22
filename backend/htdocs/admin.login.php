@@ -1,6 +1,8 @@
 <?php
 session_start();
 
+echo htmlspecialchars($_POST['commentaire']);
+
 $pdo = new PDO("mysql:host=localhost;dbname=cuisine_du_monde", "root", "");
 
 // Sécurité à améliorer, mais on reste simple pour l’instant
