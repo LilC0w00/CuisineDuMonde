@@ -1,8 +1,5 @@
 <?php
 
-echo htmlspecialchars($_POST['commentaire']);
-
-
 session_start();
 if (!isset($_SESSION['admin'])) {
   header("Location: admin-login.html"); // Interdit si pas connecté
