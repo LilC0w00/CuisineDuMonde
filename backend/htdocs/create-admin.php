@@ -31,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Créer un compte</title>
 
-  <link rel="stylesheet" href="logcrea.css">
+  <link rel="stylesheet" href="../../frontend/css/logcrea.css">
 </head>
 
 <body>
