@@ -101,3 +101,70 @@ main h5 {
   color: var(--doredecor);
   font-family: "Birthstone";
 }
+
+/* Responsive adjustments */@media screen and (max-width: 1024px) {
+.reservation-menu {
+  flex-direction: column;
+}
+
+.menu-item {
+  border-right: none;
+  border-bottom: 1px solid #999;
+}
+
+ .menu-item:last-child {
+  border-bottom: none;
+}
+
+.menu-item .menu-content {
+  position: static;
+  width: 100%;
+}
+
+.menu-item:hover .menu-content {
+  display: block;
+}
+
+.reserve-btn button {
+  width: 100%;
+}}
+
+@media screen and (max-width:768px) {
+
+
+  #logo {
+    font-size: 1.8rem;
+  }
+
+   header p {
+    font-size: 0.95rem;
+    padding: 0 10px;
+   }
+
+   iframe {
+     height: 300px;
+  }
+
+   main h5 {
+     font-size: 1.5rem;
+   }
+
+    .reservation {
+      padding: 0 15px;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    nav ul li a, .reserve-btn button {
+      font-size: 0.9rem;
+    }
+
+    .menu-item label span, .menu-item input, .menu-item select {
+      font-size: 0.9rem;
+    }
+
+    .menu-content {
+      padding: 10px;
+    }
+  }
+
