@@ -1,0 +1,101 @@
+/* ========== TABLETTES (<= 1024px) ========== */
+@media screen and (max-width: 1024px) {
+
+  #carte-pays {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 40px 0;
+    gap: 40px;
+  }
+
+  .carte {
+    width: 40vw;
+    height: 40vh;
+    margin: 20px;
+  }
+
+  .title-card {
+    top: -30px;
+    font-size: 1.5rem;
+  }
+
+  footer nav ul {
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+  }
+
+  .social-icons {
+    flex-direction: row;
+    justify-content: center;
+    transform: translateX(0);
+  }
+
+  #logo {
+    font-size: 8rem;
+  }
+
+}
+
+/* ========== SMARTPHONES (<= 768px) ========== */
+@media screen and (max-width: 768px) {
+
+  header p, #logo {
+    padding: 0 20px;
+    text-align: center;
+  }
+
+  header {
+    height: 70vh;
+  }
+
+  header button {
+    width: 200px;
+    margin-top: auto;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .carte {
+    width: 80vw;
+    height: 40vh;
+  }
+
+  main button {
+    width: 180px;
+    font-size: 16px;
+  }
+
+  footer nav ul {
+    font-size: 15px;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    padding: 0;
+  }
+
+  .logo-miniature {
+    margin-left: 8vw;
+  }
+
+  #adress::after {
+    font-size: 0.7rem;
+    margin-top: 10px;
+  }
+
+  #logo {
+    font-size: 3rem;
+    margin-top: 20vh;
+    margin-bottom: 5vh;
+  }
+
+  header p {
+    font-size: 0.7rem;
+  }
+
+
+}
