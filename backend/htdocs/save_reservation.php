@@ -22,13 +22,13 @@ try {
 }
 
 // Étape 2 : Récupération des données du formulaire (méthode POST)
-$nom = $_POST['nom'] ?? '';
-$email = $_POST['email'] ?? '';
-$tel = $_POST['tel'] ?? '';
-$heure = $_POST['heure'] ?? '00:00';
-$theme = $_POST['theme'] ?? '';
-$date = $_POST['date'] ?? '2025-01-01';
-$nb_personnes = $_POST['nb_personnes'] ?? 1;
+$nom = htmlspecialchars($_POST['nom'] ?? '', ENT_QUOTES, 'UTF-8');
+$email = htmlspecialchars($_POST['email'] ?? '', ENT_QUOTES, 'UTF-8');
+$tel = htmlspecialchars($_POST['tel'] ?? '', ENT_QUOTES, 'UTF-8');
+$heure = htmlspecialchars($_POST['heure'] ?? '00:00', ENT_QUOTES, 'UTF-8');
+$theme = htmlspecialchars($_POST['theme'] ?? '', ENT_QUOTES, 'UTF-8');
+$date = htmlspecialchars($_POST['date'] ?? '2025-01-01', ENT_QUOTES, 'UTF-8');
+$nb_personnes = htmlspecialchars($_POST['nb_personnes'] ?? 1, ENT_QUOTES, 'UTF-8');
 
 if (empty($heure)) {
   $heure = '00:00'; // Assigner une valeur par défaut si vide
