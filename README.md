@@ -31,7 +31,7 @@ Projet réalisé dans le cadre de la formation : Titre Professionnel Développeu
 3. **Création de la base de données**
    - Ouvrir phpMyAdmin dans le navigateur : `http://localhost/phpmyadmin`
    - Créer une nouvelle base de données : `cuisine_du_monde`
-   - Importer le fichier `/db/schema.sql` pour générer les tables
+   - Importer le fichier `/db/cuisine_du_monde.sql` pour générer les tables
 
 4. **Accéder à l’application**
    - Page d’accueil (client) :  
